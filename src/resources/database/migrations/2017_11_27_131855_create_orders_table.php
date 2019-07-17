@@ -11,7 +11,13 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->string('number', 32);
             $table->string('status', 32);
-            $table->integer('user_id')->unsigned()->nullable();
+
+            if (version_compare(App::version(), '5.8.0', '>=')) {
+                $table->bigInteger('user_id')->unsigned()->nullable();
+            } else {
+                $table->integer('user_id')->unsigned()->nullable();
+            }
+            
             $table->integer('billpayer_id')->unsigned()->nullable();
             $table->integer('shipping_address_id')->unsigned()->nullable();
             $table->text('notes')->nullable();
