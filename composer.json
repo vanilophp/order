@@ -21,7 +21,8 @@
         "konekt/user": ">=0.9.0",
         "konekt/address": ">=0.9.7",
         "vanilo/contracts": "0.5.*",
-        "vanilo/support": "0.5.*"
+        "vanilo/support": "0.5.*",
+        "konekt/laravel-migration-compatibility": "^1.0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "6.2 - 7.5",
